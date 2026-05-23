@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dewata Network</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo">
+    DEWATA <span>NETWORK</span>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#servers">Servers</a>
+    <a href="#features">Features</a>
+    <a href="#store">Store</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#community">Community</a>
+  </nav>
+
+  <a class="play-btn" href="#">
+    PLAY NOW
+  </a>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <span class="hero-tag">
+      INDONESIA MINECRAFT NETWORK
+    </span>
+
+    <h1>
+      WELCOME TO <span>DEWATA NETWORK</span>
+    </h1>
+
+    <p>
+      TEMPAT ORANG UNTUK MEMBUAT KARYA DAN BERKUMPUL BERSAMA TEMAN-TEMAN BARU
+    </p>
+
+    <div class="buttons">
+
+  <button class="btn-primary" onclick="copyIP()">
+    JOIN SERVER
+  </button>
+
+  <a href="https://discord.gg/hwUgRaFdf"
+     target="_blank"
+     class="btn-secondary discord-link">
+
+     DISCORD
+
+  </a>
+
+</div>
+    <div class="server-box">
+
+      <h3>SERVER STATUS</h3>
+
+      <div class="stats">
+
+        <div>
+          <span id="players">247</span>
+          <p>Players Online</p>
+        </div>
+
+        <div>
+          <span>1.21+</span>
+          <p>Version</p>
+        </div>
+
+        <div>
+          <span>99.9%</span>
+          <p>Uptime</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JOIN GUIDE -->
+<section class="join-guide">
+
+  <h2>RULES DAN CARA BERMAIN</h2>
+
+  <div class="join-wrapper">
+
+    <!-- CARA JOIN -->
+    <div class="guide-card">
+
+      <h3>📌 CARA JOIN SERVER DEWATA</h3>
+
+      <ol>
+        <li>Buka Minecraft Kamu</li>
+        <li>Lalu Masuk Ke Bagian Multiplayer / Server</li>
+        <li>Tambahkan Server Dan Masukkan IP</li>
+        <li>Pencet Join Server</li>
+        <li>Dan Selamat Bergabung Ke Server Dewata</li>
+      </ol>
+
+      <div class="guide-ip">
+        <span>play.dewata.id</span>
+
+        <button onclick="copyIP()">
+          COPY IP
+        </button>
+      </div>
+
+    </div>
+
+    <!-- RULES -->
+    <div class="guide-card rules-card">
+
+      <h3>📜 DEWATA RULES</h3>
+
+      <ul>
+        <li>• Dilarang Toxic</li>
+        <li>• Dilarang Promosi Server Lain</li>
+        <li>• Dilarang Spam Di Grup Maupun Di Server</li>
+        <li>• Dilarang Menggunakan Cheat / Bug Abuse</li>
+        <li>• Dilarang Membahas Dan Mengirim Stiker 18+</li>
+        <li>• Dilarang Membuat Server Lag</li>
+        <li>• Dilarang Mengirim Video / Foto / Audio 18+</li>
+        <li>• Dilarang Grief Base Tanpa Sebab</li>
+      </ul>
+
+      <div class="rules-punish">
+        ⚠️ Sanksi: <span>BANNED</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+
+  <h2>FITUR</h2>
+
+<div class="feature-grid">
+
+  <div class="feature-card">
+    <div class="icon">⚔️</div>
+    <h3>Custom RPG</h3>
+    <p>
+      Sistem leveling, skill, senjata sihir,
+      dan boss dungeon yang epik.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">💰</div>
+    <h3>Ekonomi</h3>
+    <p>
+      Trading, jobs, marketplace,
+      dan lelang antar player.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🎁</div>
+    <h3>Daily Rewards</h3>
+    <p>
+      Claim hadiah setiap hari
+      dan dapatkan item eksklusif.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">👑</div>
+    <h3>Premium Rank</h3>
+    <p>
+      Unlock kosmetik, particle,
+      tag, dan berbagai fitur spesial.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon">🌌</div>
+    <h3>Visual Cosmic</h3>
+    <p>
+      Animasi keren, efek glow,
+      dan tampilan modern futuristik.
+    </p>
+  </div>
+
+</div>
+
+</section>
+
+<!-- SERVERS -->
+<section id="servers" class="servers">
+
+  <h2>MODE SERVER</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>SURVIVAL</h3>
+      <p>
+        Sistem ekonomi, land claim,
+        jobs, custom enchant, dan boss.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>SKYBLOCK</h3>
+      <p>
+        Upgrade generator, custom crops,
+        marketplace, dan island unik.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>MMORPG</h3>
+      <p>
+        Class, dungeon, raid,
+        dan monster legendaris.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<!-- EVENTS -->
+<section class="events">
+
+  <h2>EVENT TERBATAS</h2>
+
+  <div class="event-box">
+
+    <div class="event-card">
+      <h3>⚔️ TURNAMEN PVP</h3>
+      <p>
+        Lawan player terkuat
+        dan menangkan hadiah legendaris.
+      </p>
+    </div>
+
+    <div class="event-card">
+      <h3>🎃 EVENT HALLOWEEN</h3>
+      <p>
+        Dungeon menyeramkan
+        dan loot Halloween eksklusif.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- RANKS -->
+<section class="ranks">
+
+  <h2>PREMIUM RANKS</h2>
+
+  <div class="rank-grid">
+
+    <!-- ASTEROID -->
+    <div class="rank-card asteroid">
+
+      <div class="rank-header">
+        <h3>ASTEROID</h3>
+        <div class="price">70K</div>
+      </div>
+
+      <p>
+        Starter premium rank with
+        basic perks and cosmetics.
+      </p>
+
+      <ul>
+        <li>✔ Basic Kits</li>
+        <li>✔ Chat Color</li>
+        <li>✔ Daily Rewards</li>
+      </ul>
+
+      <a href="https://wa.me/62081337574016"
+   target="_blank"
+   class="buy-btn">
+   BUY NOW
+</a>
+    </div>
+
+    <!-- BULAN -->
+    <div class="rank-card bulan">
+
+      <div class="rank-header">
+        <h3>BULAN</h3>
+        <div class="price">100K</div>
+      </div>
+
+      <p>
+        Unlock more rewards,
+        particles, and commands.
+      </p>
+
+      <ul>
+        <li>✔ Better Kits</li>
+        <li>✔ Special Particle</li>
+        <li>✔ Extra Homes</li>
+      </ul>
+
+      <button>BUY NOW</button>
+
+    </div>
+
+    <!-- ORBITER -->
+    <div class="rank-card orbiter">
+
+      <div class="rank-header">
+        <h3>ORBITER</h3>
+        <div class="price">130K</div>
+      </div>
+
+      <p>
+        Advanced rank with
+        cosmetics and boosts.
+      </p>
+
+      <ul>
+        <li>✔ Fly Access</li>
+        <li>✔ Epic Crates</li>
+        <li>✔ Economy Boost</li>
+      </ul>
+
+      <button>BUY NOW</button>
+
+    </div>
+
+    <!-- GALAXY -->
+    <div class="rank-card galaxy">
+
+      <div class="rank-header">
+        <h3>GALAXY</h3>
+        <div class="price">180K</div>
+      </div>
+
+      <p>
+        Cosmic themed rank with
+        premium server benefits.
+      </p>
+
+      <ul>
+        <li>✔ Galaxy Tag</li>
+        <li>✔ Rare Cosmetics</li>
+        <li>✔ Priority Queue</li>
+      </ul>
+
+      <button>BUY NOW</button>
+
+    </div>
+
+    <!-- MILKYWAY -->
+    <div class="rank-card milkyway">
+
+      <div class="rank-header">
+        <h3>MILKYWAY</h3>
+        <div class="price">250K</div>
+      </div>
+
+      <p>
+        Ultimate legendary rank
+        with all exclusive features.
+      </p>
+
+      <ul>
+        <li>✔ All Commands</li>
+        <li>✔ Legendary Kits</li>
+        <li>✔ Exclusive Aura</li>
+      </ul>
+
+      <button>BUY NOW</button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STORE -->
+<section id="store" class="store">
+
+  <h2>STORE</h2>
+
+  <div class="store-box">
+
+    <div class="product">
+      <h3>VIP RANK</h3>
+
+      <p>
+        Exclusive perks & cosmetics
+      </p>
+
+      <a href="https://wa.me/62081337574016"
+         target="_blank">
+
+         BUY NOW
+
+      </a>
+    </div>
+
+    <div class="product">
+      <h3>COINS</h3>
+
+      <p>
+        Purchase coins for items
+      </p>
+
+      <a href="https://wa.me/62081337574016"
+         target="_blank">
+
+         TOP UP
+
+      </a>
+    </div>
+
+    <div class="product">
+      <h3>BATTLEPASS</h3>
+
+      <p>
+        Unlock seasonal rewards
+      </p>
+
+      <a href="https://wa.me/62081337574016"
+         target="_blank">
+
+         UNLOCK
+
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEADERBOARD -->
+<section id="leaderboard" class="leaderboard">
+
+  <h2>TOP PLAYERS</h2>
+
+  <table>
+
+    <tr>
+      <th>Rank</th>
+      <th>Player</th>
+      <th>Power</th>
+    </tr>
+
+    <tr>
+      <td>#1</td>
+      <td>Ryuu</td>
+      <td>9,421</td>
+    </tr>
+
+    <tr>
+      <td>#2</td>
+      <td>Kazuto</td>
+      <td>8,997</td>
+    </tr>
+
+    <tr>
+      <td>#3</td>
+      <td>Shiro</td>
+      <td>8,101</td>
+    </tr>
+
+  </table>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+
+  <div class="faq-header">
+    <h2>FAQ</h2>
+    <span>Need Help?</span>
+  </div>
+
+  <div class="faq-grid">
+
+    <div class="faq-card">
+      <h3>Version</h3>
+      <p>Java 1.21+</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Cracked</h3>
+      <p>Supported</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Ranks</h3>
+      <p>Available in store</p>
+    </div>
+
+    <div class="faq-card">
+      <h3>Region</h3>
+      <p>Asia / Indonesia</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="community">
+
+  <h2>JOIN OUR COMMUNITY</h2>
+
+  <p>
+    Connect with thousands of players
+    on Discord, TikTok, and Instagram.
+  </p>
+
+  <div class="socials">
+
+    <a href="https://discord.gg/hwUgRaFdf"
+       target="_blank">
+
+       Discord
+
+    </a>
+
+    <a href="https://tiktok.com"
+       target="_blank">
+
+       TikTok
+
+    </a>
+
+    <a href="https://instagram.com"
+       target="_blank">
+
+       Instagram
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- DISCORD SUPPORT -->
+<section class="discord-support">
+
+  <div class="discord-box">
+
+    <h2>BUY RANKS VIA WHATSAPP</h2>
+
+    <p>
+      Contact admin directly to buy ranks,
+      coins, battlepass, and premium items.
+    </p>
+
+    <a href="https://wa.me/62081337574016"
+       target="_blank"
+       class="wa-btn">
+
+       CONTACT ADMIN
+
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Dewata Network — Made with ❤️ in Bali
+</footer>
+
+<div id="toast" class="toast">
+  IP Copied!
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
