@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -115,56 +119,99 @@
 
 </section>
 
-<!-- JOIN GUIDE -->
-<section class="join-guide">
+
+    <!-- JOIN GUIDE -->
+<section class="join-guide" id="guide">
 
   <div class="section-title">
     <span>GUIDE</span>
     <h2>RULES DAN CARA BERMAIN</h2>
   </div>
 
-  <div class="join-wrapper">
+  <div class="grid">
 
- <!-- JOIN -->
-<div class="guide-card">
+    <!-- JOIN CARD -->
+    <div class="guide-card ui-card">
 
-  <h3>📌 CARA JOIN SERVER</h3>
+      <div class="guide-top">
+        <div class="guide-icon">🎮</div>
+        <div>
+          <span class="guide-label">START PLAYING</span>
+          <h3>CARA JOIN SERVER</h3>
+        </div>
+      </div>
 
-  <ol>
+      <ol class="guide-list">
 
-    <li>Buka Minecraft Java / Bedrock</li>
-    <li>Masuk ke Multiplayer</li>
-    <li>Tambahkan server baru</li>
-    <li>Masukkan IP server Dewata</li>
-    <li>Klik Join dan mulai bermain</li>
+        <li>
+          <span>1</span>
+          Buka Minecraft Java / Bedrock
+        </li>
 
-  </ol>
+        <li>
+          <span>2</span>
+          Masuk ke menu Multiplayer
+        </li>
 
-  <!-- TARUH DI SINI -->
-  <div class="welcome-message">
-    🎮 Selamat Bermain YA
-  </div>
+        <li>
+          <span>3</span>
+          Tambahkan server baru
+        </li>
 
-</div>
+        <li>
+          <span>4</span>
+          Masukkan IP server Dewata
+        </li>
 
-    <!-- RULES -->
-    <div class="guide-card">
+        <li>
+          <span>5</span>
+          Klik Join dan mulai bermain
+        </li>
 
-      <h3>📜 DEWATA RULES</h3>
+      </ol>
 
-      <ul class="rules-list">
+      <div class="welcome-message">
+         Selamat datang di Dewata SMP
+      </div>
 
-        <li>• Dilarang toxic & spam</li>
-        <li>• Dilarang cheat / bug abuse</li>
-        <li>• Dilarang grief tanpa alasan</li>
-        <li>• Dilarang promosi server lain</li>
-        <li>• Dilarang konten 18+</li>
-        <li>• Hormati semua player</li>
+      <div class="guide-buttons">
+
+        <a href="#" class="guide-btn primary">
+          COPY IP
+        </a>
+
+        <a href="#community" class="guide-btn secondary">
+          DISCORD
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RULES CARD -->
+    <div class="guide-card ui-card">
+
+      <div class="guide-top">
+        <div class="guide-icon">📜</div>
+        <div>
+          <span class="guide-label">SERVER RULES</span>
+          <h3>DEWATA RULES</h3>
+        </div>
+      </div>
+
+      <ul class="rules-list modern-rules">
+
+        <li>✅ Dilarang toxic & spam</li>
+        <li>✅ Dilarang cheat / bug abuse</li>
+        <li>✅ Dilarang grief tanpa alasan</li>
+        <li>✅ Dilarang promosi server lain</li>
+        <li>✅ Dilarang konten 18+</li>
+        <li>✅ Hormati semua player</li>
 
       </ul>
 
       <div class="rules-warning">
-        ⚠️ Pelanggaran berat akan dikenakan BANNED
+         Pelanggaran berat akan dikenakan BANNED
       </div>
 
     </div>
@@ -183,9 +230,14 @@
 
   <div class="grid">
 
-    <div class="card">
+    <!-- CARD -->
+    <div class="card feature-card">
 
-      <div class="icon">⚔️</div>
+      <div class="feature-glow"></div>
+
+      <div class="feature-icon">
+        ⚔️
+      </div>
 
       <h3>Custom RPG</h3>
 
@@ -194,11 +246,20 @@
         class, dan senjata legendaris.
       </p>
 
+      <a href="#" class="feature-btn">
+        Explore
+      </a>
+
     </div>
 
-    <div class="card">
+    <!-- CARD -->
+    <div class="card feature-card">
 
-      <div class="icon">💰</div>
+      <div class="feature-glow"></div>
+
+      <div class="feature-icon">
+        💰
+      </div>
 
       <h3>Ekonomi</h3>
 
@@ -207,11 +268,20 @@
         dan sistem trading antar player.
       </p>
 
+      <a href="#" class="feature-btn">
+        Learn More
+      </a>
+
     </div>
 
-    <div class="card">
+    <!-- CARD -->
+    <div class="card feature-card">
 
-      <div class="icon">🎁</div>
+      <div class="feature-glow"></div>
+
+      <div class="feature-icon">
+        🎁
+      </div>
 
       <h3>Daily Rewards</h3>
 
@@ -220,11 +290,20 @@
         dan item eksklusif.
       </p>
 
+      <a href="#" class="feature-btn">
+        Claim Rewards
+      </a>
+
     </div>
 
-    <div class="card">
+    <!-- CARD -->
+    <div class="card feature-card">
 
-      <div class="icon">👑</div>
+      <div class="feature-glow"></div>
+
+      <div class="feature-icon">
+        👑
+      </div>
 
       <h3>Premium Rank</h3>
 
@@ -232,6 +311,10 @@
         Unlock cosmetics,
         particles, dan fitur spesial.
       </p>
+
+      <a href="#store" class="feature-btn">
+        Buy Rank
+      </a>
 
     </div>
 
@@ -336,33 +419,63 @@
     <div class="rank-card asteroid">
 
       <div class="rank-top">
-
         <h3>ASTEROID</h3>
-
-        <div class="price">
-          70K
-        </div>
-
+        <div class="price">70K</div>
       </div>
 
-      <p>
-        Starter premium rank
-        untuk pengalaman lebih nyaman.
-      </p>
+      <p>Starter rank untuk player baru.</p>
 
       <ul>
-
+        <li>✔ Basic Kit</li>
         <li>✔ Daily Rewards</li>
-        <li>✔ Basic Kits</li>
         <li>✔ Chat Color</li>
-
       </ul>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="buy-btn"
-      >
+      <a href="https://wa.me/62081337574016" target="_blank" class="buy-btn">
+        BUY NOW
+      </a>
+
+    </div>
+
+    <!-- BULAN -->
+    <div class="rank-card bulan">
+
+      <div class="rank-top">
+        <h3>BULAN</h3>
+        <div class="price">100K</div>
+      </div>
+
+      <p>Rank menengah dengan fitur tambahan.</p>
+
+      <ul>
+        <li>✔ Better Kits</li>
+        <li>✔ Particle Effect</li>
+        <li>✔ Extra Homes</li>
+      </ul>
+
+      <a href="https://wa.me/62081337574016" target="_blank" class="buy-btn">
+        BUY NOW
+      </a>
+
+    </div>
+
+    <!-- ORBITER -->
+    <div class="rank-card orbiter">
+
+      <div class="rank-top">
+        <h3>ORBITER</h3>
+        <div class="price">130K</div>
+      </div>
+
+      <p>Unlock fitur premium lebih lengkap.</p>
+
+      <ul>
+        <li>✔ Fly Lobby</li>
+        <li>✔ Rare Cosmetics</li>
+        <li>✔ Priority Queue</li>
+      </ul>
+
+      <a href="https://wa.me/62081337574016" target="_blank" class="buy-btn">
         BUY NOW
       </a>
 
@@ -372,33 +485,19 @@
     <div class="rank-card galaxy">
 
       <div class="rank-top">
-
         <h3>GALAXY</h3>
-
-        <div class="price">
-          180K
-        </div>
-
+        <div class="price">180K</div>
       </div>
 
-      <p>
-        Rank premium dengan
-        fitur cosmic eksklusif.
-      </p>
+      <p>Cosmic rank dengan efek eksklusif.</p>
 
       <ul>
-
-        <li>✔ Priority Queue</li>
-        <li>✔ Rare Cosmetics</li>
         <li>✔ Galaxy Effects</li>
-
+        <li>✔ Premium Commands</li>
+        <li>✔ Exclusive Tag</li>
       </ul>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="buy-btn"
-      >
+      <a href="https://wa.me/62081337574016" target="_blank" class="buy-btn">
         BUY NOW
       </a>
 
@@ -408,33 +507,19 @@
     <div class="rank-card milkyway">
 
       <div class="rank-top">
-
         <h3>MILKYWAY</h3>
-
-        <div class="price">
-          250K
-        </div>
-
+        <div class="price">250K</div>
       </div>
 
-      <p>
-        Ultimate rank dengan
-        semua fitur eksklusif.
-      </p>
+      <p>Ultimate rank dengan semua fitur.</p>
 
       <ul>
-
-        <li>✔ All Commands</li>
+        <li>✔ All Features</li>
         <li>✔ Legendary Kits</li>
         <li>✔ Exclusive Aura</li>
-
       </ul>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="buy-btn"
-      >
+      <a href="https://wa.me/62081337574016" target="_blank" class="buy-btn">
         BUY NOW
       </a>
 
@@ -454,6 +539,7 @@
 
   <div class="grid">
 
+    <!-- VIP RANK -->
     <div class="card">
 
       <h3>VIP RANK</h3>
@@ -462,16 +548,29 @@
         Unlock premium perks & cosmetics.
       </p>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="store-btn"
-      >
-        BUY NOW
-      </a>
+      <div class="store-buttons">
+
+        <a
+          href="https://wa.me/62081337574016"
+          target="_blank"
+          class="store-btn"
+        >
+          BUY NOW
+        </a>
+
+        <a
+          href="https://yourstore.com"
+          target="_blank"
+          class="store-btn secondary"
+        >
+          VISIT STORE
+        </a>
+
+      </div>
 
     </div>
 
+    <!-- COINS -->
     <div class="card">
 
       <h3>COINS</h3>
@@ -480,16 +579,29 @@
         Top up coins untuk item dan crate.
       </p>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="store-btn"
-      >
-        TOP UP
-      </a>
+      <div class="store-buttons">
+
+        <a
+          href="https://wa.me/62081337574016"
+          target="_blank"
+          class="store-btn"
+        >
+          TOP UP
+        </a>
+
+        <a
+          href="https://yourstore.com"
+          target="_blank"
+          class="store-btn secondary"
+        >
+          SHOP NOW
+        </a>
+
+      </div>
 
     </div>
 
+    <!-- BATTLEPASS -->
     <div class="card">
 
       <h3>BATTLEPASS</h3>
@@ -498,13 +610,25 @@
         Seasonal rewards dan missions.
       </p>
 
-      <a
-        href="https://wa.me/62081337574016"
-        target="_blank"
-        class="store-btn"
-      >
-        UNLOCK
-      </a>
+      <div class="store-buttons">
+
+        <a
+          href="https://wa.me/62081337574016"
+          target="_blank"
+          class="store-btn"
+        >
+          UNLOCK
+        </a>
+
+        <a
+          href="https://yourstore.com"
+          target="_blank"
+          class="store-btn secondary"
+        >
+          LEARN MORE
+        </a>
+
+      </div>
 
     </div>
 
@@ -515,36 +639,51 @@
 <!-- COMMUNITY -->
 <section id="community" class="community">
 
-  <div class="community-box">
+  <div class="community-box modern-community">
+
+    <div class="community-glow"></div>
+
+    <span class="community-tag">
+      🌎 OFFICIAL COMMUNITY
+    </span>
 
     <h2>JOIN OUR COMMUNITY</h2>
 
     <p>
       Bergabung bersama ribuan player lainnya
-      di Discord dan sosial media Dewata.
+      di Discord dan sosial media resmi Dewata SMP.
     </p>
 
-    <div class="socials">
+    <div class="community-buttons">
 
+      <!-- DISCORD -->
       <a
         href="https://discord.gg/hwUgRaFdf"
         target="_blank"
+        class="social-btn discord"
       >
-        Discord
+        <i class="fa-brands fa-discord"></i>
+        <span>Discord</span>
       </a>
 
+      <!-- INSTAGRAM -->
       <a
         href="https://instagram.com"
         target="_blank"
+        class="social-btn instagram"
       >
-        Instagram
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
       </a>
 
+      <!-- TIKTOK -->
       <a
         href="https://tiktok.com"
         target="_blank"
+        class="social-btn tiktok"
       >
-        TikTok
+        <i class="fa-brands fa-tiktok"></i>
+        <span>TikTok</span>
       </a>
 
     </div>
@@ -556,7 +695,13 @@
 <!-- CONTACT -->
 <section class="contact">
 
-  <div class="contact-box">
+  <div class="contact-box modern-contact">
+
+    <div class="contact-glow"></div>
+
+    <span class="contact-tag">
+      💬 FAST RESPONSE
+    </span>
 
     <h2>BUY RANK VIA WHATSAPP</h2>
 
@@ -565,11 +710,28 @@
       rank, coins, battlepass, dan item premium.
     </p>
 
+    <div class="contact-features">
+
+      <div class="contact-feature">
+        ⚡ Fast Response
+      </div>
+
+      <div class="contact-feature">
+        🔒 Safe Payment
+      </div>
+
+      <div class="contact-feature">
+        🎁 Bonus Rewards
+      </div>
+
+    </div>
+
     <a
       href="https://wa.me/62081337574016"
       target="_blank"
-      class="wa-btn"
+      class="whatsapp-btn"
     >
+      <i class="fab fa-whatsapp"></i>
       CONTACT ADMIN
     </a>
 
@@ -580,7 +742,7 @@
 <!-- FOOTER -->
 <footer>
 
-  © 2026 Dewata Network — Made with ❤️ in Bali
+  © 2026 Dewata Network 
 
 </footer>
 
