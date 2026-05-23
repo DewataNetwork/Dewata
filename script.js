@@ -1,12 +1,13 @@
 // =========================
-// COPY IP
+// COPY SERVER IP
 // =========================
 
-function copyIP(){
+function copyIP() {
 
   navigator.clipboard.writeText("play.dewata.id");
 
-  const toast = document.getElementById("toast");
+  const toast =
+    document.getElementById("toast");
 
   toast.classList.add("show");
 
@@ -20,21 +21,22 @@ function copyIP(){
 // PLAYER COUNTER
 // =========================
 
-const playerCounter = document.getElementById("players");
+const playerCounter =
+  document.getElementById("players");
 
 let count = 0;
-let target = 247;
+const target = 247;
 
 const counter = setInterval(() => {
 
   count++;
 
-  playerCounter.innerText = count;
+  if (playerCounter) {
+    playerCounter.innerText = count;
+  }
 
-  if(count >= target){
-
+  if (count >= target) {
     clearInterval(counter);
-
   }
 
 }, 10);
@@ -45,78 +47,108 @@ const counter = setInterval(() => {
 
 window.addEventListener("load", () => {
 
-tsParticles.load("particles-js",{
+  if (typeof tsParticles !== "undefined") {
 
-  background:{
-    color:"transparent"
-  },
+    tsParticles.load("particles-js", {
 
-  particles:{
+      particles: {
 
-    number:{
-      value:80
-    },
+        number: {
+          value: 70
+        },
 
-    color:{
-      value:[
-        "#8b5cf6",
-        "#06b6d4",
-        "#ffffff"
-      ]
-    },
+        color: {
+          value: [
+            "#8b5cf6",
+            "#06b6d4",
+            "#ffffff"
+          ]
+        },
 
-    links:{
-      enable:true,
-      color:"#8b5cf6",
-      distance:140,
-      opacity:0.2
-    },
+        links: {
+          enable: true,
+          distance: 140,
+          opacity: 0.15,
+          color: "#8b5cf6"
+        },
 
-    move:{
-      enable:true,
-      speed:1
-    },
+        move: {
+          enable: true,
+          speed: 1
+        },
 
-    size:{
-      value:{
-        min:1,
-        max:3
-      }
-    },
+        size: {
+          value: {
+            min: 1,
+            max: 3
+          }
+        },
 
-    opacity:{
-      value:.5
-    }
+        opacity: {
+          value: 0.6
+        }
+
+      },
+
+      interactivity: {
+
+        events: {
+
+          onHover: {
+            enable: true,
+            mode: "grab"
+          },
+
+          resize: true
+
+        },
+
+        modes: {
+
+          grab: {
+            distance: 180,
+            links: {
+              opacity: 0.2
+            }
+          }
+
+        }
+
+      },
+
+      detectRetina: true
+
+    });
 
   }
 
 });
 
-});
-
 // =========================
-// SCROLL REVEAL
+// SCROLL REVEAL ANIMATION
 // =========================
 
-const reveals = document.querySelectorAll(
-  '.card, .product, .feature-card, .event-card, .rank-card, .faq-card, .guide-card'
-);
+const revealElements =
+  document.querySelectorAll(
+    ".card, .guide-card, .rank-card, .community-box, .contact-box"
+  );
 
-function revealOnScroll(){
+function revealOnScroll() {
 
-  reveals.forEach(reveal => {
+  revealElements.forEach((element) => {
 
-    const windowHeight = window.innerHeight;
+    const windowHeight =
+      window.innerHeight;
 
     const revealTop =
-      reveal.getBoundingClientRect().top;
+      element.getBoundingClientRect().top;
 
-    if(revealTop < windowHeight - 100){
+    if (revealTop < windowHeight - 80) {
 
-      reveal.style.opacity = 1;
+      element.style.opacity = "1";
 
-      reveal.style.transform =
-        'translateY(0)';
+      element.style.transform =
+        "translateY(0)";
 
     }
 
@@ -124,21 +156,92 @@ function revealOnScroll(){
 
 }
 
-window.addEventListener(
-  'scroll',
-  revealOnScroll
-);
+revealElements.forEach((element) => {
 
-reveals.forEach(reveal => {
+  element.style.opacity = "0";
 
-  reveal.style.opacity = 0;
+  element.style.transform =
+    "translateY(50px)";
 
-  reveal.style.transform =
-    'translateY(40px)';
-
-  reveal.style.transition =
-    '.6s ease';
+  element.style.transition =
+    "all .7s ease";
 
 });
 
+window.addEventListener(
+  "scroll",
+  revealOnScroll
+);
+
 revealOnScroll();
+
+// =========================
+// HEADER SCROLL EFFECT
+// =========================
+
+const header =
+  document.querySelector(".header");
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    if (window.scrollY > 50) {
+
+      header.style.background =
+        "rgba(10,10,20,.82)";
+
+      header.style.backdropFilter =
+        "blur(18px)";
+
+      header.style.borderBottom =
+        "1px solid rgba(255,255,255,.08)";
+
+    } else {
+
+      header.style.background =
+        "rgba(10,10,20,.5)";
+
+      header.style.backdropFilter =
+        "blur(14px)";
+
+      header.style.borderBottom =
+        "1px solid rgba(255,255,255,.05)";
+
+    }
+
+  }
+);
+
+// =========================
+// SMOOTH BUTTON HOVER
+// =========================
+
+const buttons =
+  document.querySelectorAll(
+    ".btn-primary, .btn-secondary, .buy-btn, .store-btn, .wa-btn, .play-btn"
+  );
+
+buttons.forEach((button) => {
+
+  button.addEventListener(
+    "mouseenter",
+    () => {
+
+      button.style.transform =
+        "translateY(-4px)";
+
+    }
+  );
+
+  button.addEventListener(
+    "mouseleave",
+    () => {
+
+      button.style.transform =
+        "translateY(0)";
+
+    }
+  );
+
+});
