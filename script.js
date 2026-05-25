@@ -245,3 +245,69 @@ buttons.forEach((button) => {
   );
 
 });
+
+// =========================
+// LANGUAGE SELECT
+// =========================
+
+const languageSelect =
+  document.getElementById(
+    "languageSelect"
+  );
+
+if(languageSelect){
+
+  languageSelect.addEventListener(
+    "change",
+    () => {
+
+      const lang =
+        languageSelect.value;
+
+      const toast =
+        document.getElementById(
+          "toast"
+        );
+
+      toast.innerText =
+        "Language Changed: " + lang;
+
+      toast.classList.add("show");
+
+      setTimeout(() => {
+
+        toast.classList.remove(
+          "show"
+        );
+
+      },2000);
+
+    }
+  );
+
+}
+
+// =========================
+// LIVE STATUS RANDOM
+// =========================
+
+const livePlayers =
+  document.getElementById(
+    "livePlayers"
+  );
+
+if(livePlayers){
+
+  setInterval(() => {
+
+    const random =
+      Math.floor(
+        Math.random() * 80
+      ) + 200;
+
+    livePlayers.innerText =
+      random;
+
+  },3000);
+
+}
