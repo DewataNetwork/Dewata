@@ -311,3 +311,183 @@ if(livePlayers){
   },3000);
 
 }
+
+// =========================
+// VOTE SYSTEM
+// =========================
+
+const submitVote =
+  document.getElementById("submitVote");
+
+const voteState =
+  document.getElementById("voteState");
+
+const successState =
+  document.getElementById("successState");
+
+const countdown =
+  document.getElementById("countdown");
+
+let countdownStarted = false;
+let totalSeconds = 24 * 60 * 60;
+
+// =========================
+// CEK VOTE SEBELUMNYA
+// =========================
+
+if (
+  voteState &&
+  successState &&
+  countdown
+) {
+
+  const lastVote =
+    localStorage.getItem("lastVote");
+
+  if (lastVote) {
+
+    const diff =
+      Date.now() - Number(lastVote);
+
+    const remain =
+      86400 - Math.floor(diff / 1000);
+
+    if (remain > 0) {
+
+      totalSeconds = remain;
+
+      voteState.style.display =
+        "none";
+
+      successState.style.display =
+        "block";
+
+      startCountdown();
+
+    } else {
+
+      localStorage.removeItem(
+        "lastVote"
+      );
+
+    }
+
+  }
+
+}
+
+// =========================
+// KLIK CLAIM REWARD
+// =========================
+
+if (submitVote) {
+
+  submitVote.addEventListener(
+    "click",
+    () => {
+
+      const username =
+        document.getElementById(
+          "username"
+        );
+
+      if (
+        !username ||
+        username.value.trim() === ""
+      ) {
+
+        alert(
+          "Masukkan Username Minecraft!"
+        );
+
+        return;
+
+      }
+
+      localStorage.setItem(
+        "lastVote",
+        Date.now()
+      );
+
+      totalSeconds =
+        24 * 60 * 60;
+
+      voteState.style.display =
+        "none";
+
+      successState.style.display =
+        "block";
+
+      countdownStarted = false;
+
+      startCountdown();
+
+    }
+  );
+
+}
+
+// =========================
+// COUNTDOWN
+// =========================
+
+function startCountdown() {
+
+  if (
+    countdownStarted ||
+    !countdown
+  ) return;
+
+  countdownStarted = true;
+
+  function update() {
+
+    const hours =
+      Math.floor(
+        totalSeconds / 3600
+      );
+
+    const minutes =
+      Math.floor(
+        (totalSeconds % 3600) / 60
+      );
+
+    const seconds =
+      totalSeconds % 60;
+
+    countdown.innerText =
+      `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    if (totalSeconds > 0) {
+
+      totalSeconds--;
+
+    } else {
+
+      clearInterval(timer);
+
+      localStorage.removeItem(
+        "lastVote"
+      );
+
+      successState.style.display =
+        "none";
+
+      voteState.style.display =
+        "block";
+
+      countdownStarted = false;
+
+    }
+
+  }
+
+  update();
+
+  const timer =
+    setInterval(
+      update,
+      1000
+    );
+
+}

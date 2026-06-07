@@ -1094,9 +1094,24 @@ section{
 /* STORE CARD */
 /* ========================= */
 
+.store .grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit, minmax(320px,1fr));
+
+  gap:30px;
+  align-items:stretch;
+}
+
 .store-card{
   position:relative;
   overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+
+  height:100%;
+  min-height:560px;
 }
 
 .store-card::before{
@@ -1116,6 +1131,75 @@ section{
   rgba(139,92,246,.15);
 
   filter:blur(70px);
+}
+
+/* isi card */
+.store-card p{
+  color:#d1d5db;
+  line-height:1.8;
+}
+
+/* feature list otomatis rapih */
+.store-features{
+  margin-top:25px;
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  flex:1;
+}
+
+/* tombol selalu di bawah */
+.store-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:auto;
+
+  flex-wrap:wrap;
+}
+
+.store-btn{
+  flex:1;
+
+  text-align:center;
+
+  padding:14px 24px;
+  border-radius:14px;
+
+  text-decoration:none;
+  color:#fff;
+  font-weight:700;
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #06b6d4
+  );
+
+  transition:.3s;
+}
+
+.store-btn.secondary{
+  background:
+  rgba(255,255,255,.08);
+
+  border:
+  1px solid rgba(255,255,255,.1);
+}
+
+/* mobile */
+@media(max-width:768px){
+
+  .store-card{
+    min-height:auto;
+  }
+
+  .store-buttons{
+    flex-direction:column;
+  }
+
 }
 
 /* ========================= */
@@ -2019,6 +2103,30 @@ section{
 
   border:
   1px solid rgba(255,255,255,.08);
+}
+
+.vote-input{
+  width:100%;
+  max-width:450px;
+
+  margin-top:30px;
+  padding:18px;
+
+  border:none;
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,.08);
+
+  color:#fff;
+
+  font-size:16px;
+}
+
+.vote-input::placeholder{
+  color:#9ca3af;
 }
 
 /* ========================= */
